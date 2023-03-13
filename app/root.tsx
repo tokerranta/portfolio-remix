@@ -7,8 +7,10 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import PageNav from "./components/PageNav";
 import stylesheet from "~/tailwind.css";
+import Footer from "./components/Footer";
+import SiteNavbar from "./components/SiteNav";
+import Page from "./components/Page";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet }
@@ -28,10 +30,10 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <PageNav />
-        <main className="flex flex-column justify-center font-sans font-size text-xl">
-          <Outlet />
-        </main>
+        <SiteNavbar />
+        <Page>
+        <Outlet />
+        </Page>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
