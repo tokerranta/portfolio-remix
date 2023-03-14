@@ -32,13 +32,10 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="dark:bg-gray-900 bg-gray-100 transition-colors duration-700 dark:text-slate-300 text-gray-500">
-        <div className="flex justify-center">
+      <body className="dark:bg-gray-900 bg-gray-100 transition-colors duration-700 dark:text-gray-400 text-gray-500">
+        <div className="flex flex-column sm:flex-row justify-center">
           <SiteNavbar />
-          <div className="flex justify-end">
             <button onClick={() => setDarkmode(current => !current)}>{darkmode ? <FaMoon color="white" size={"2rem"} /> : <FaSun size={"2rem"} />}</button>
-          </div>
-
         </div>
         <Page>
         <Outlet />

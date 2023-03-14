@@ -1,5 +1,5 @@
 import type { PropsWithChildren } from "react";
 
 export default function PageTitle({ children }: PropsWithChildren) {
-    return <h1 className="text-6xl text-center mb-4">{children}</h1>
+    return <h1 className="text-4xl sm:text-6xl text-center mb-4 text-orange-400">{children}</h1>
 }
