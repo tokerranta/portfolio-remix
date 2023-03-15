@@ -1,7 +1,7 @@
 import { json } from "@remix-run/node";
 import { Outlet, useLoaderData } from "@remix-run/react";
 import Main from "~/components/Main";
-import PageTitle from "~/components/page-title";
+import PageTitle from "~/components/PageTitle";
 import { getMostRecentRepos } from "~/models/github-repos.server";
 
 export const loader = async () => {
