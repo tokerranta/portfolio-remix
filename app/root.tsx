@@ -9,8 +9,8 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import stylesheet from "~/tailwind.css";
-import SiteNavbar from "./components/site-nav";
-import Page from "./components/page";
+import SiteNavbar from "./components/SiteNav";
+import Page from "./components/Page";
 import { useState } from "react";
 
 export const links: LinksFunction = () => [
