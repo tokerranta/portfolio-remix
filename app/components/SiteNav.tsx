@@ -13,7 +13,7 @@ export default function SiteNavbar({ children }: PropsWithChildren) {
         <nav className="p-5 flex flex-row justify-end lg:grid lg:grid-flow-col lg:justify-center">
             <div className={navbarIsOpen ? "fixed top-0 left-0 h-full w-full flex flex-col gap-10 dark:bg-gray-900 bg-gray-100" : "hidden lg:grid lg:grid-flow-col"}>
                 <ul className="flex flex-col lg:grid lg:grid-flow-col"> 
-                    {links.map(({ label, to, isActive }) => <li key={to} className="px-10 py-5 border border-cyan-700 dark:hover:bg-cyan-700 lg:hover:bg-inherit lg:border-none"><NavLink onClick={closeNavbar} className={`text-2xl transition-colors block dark:text-slate-200 dark:hover:text-slate-400 hover:text-slate-400 hover:underline ${isActive && "underline text-slate-400 dark:text-slate-400"}`} to={to}>{label}</NavLink></li>)}
+                    {links.map(({ label, to, isActive }) => <li key={to} className="px-10 py-5 border border-cyan-700 lg:hover:bg-inherit lg:border-none"><NavLink onClick={closeNavbar} className={`text-2xl transition-colors block dark:text-slate-200 dark:hover:text-slate-400 hover:text-slate-400 hover:underline ${isActive && "underline text-slate-400 dark:text-slate-400"}`} to={to}>{label}</NavLink></li>)}
                 </ul>
                 {navbarIsOpen && <button className="block border border-orange-400 text-orange-400 px-20 py-5 rounded-full text-xl self-center" onClick={closeNavbar}>Close</button>}
             </div>
