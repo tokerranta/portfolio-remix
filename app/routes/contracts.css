@@ -1,0 +1,51 @@
+.paper {
+    display: grid;
+    padding: 4.5rem;
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr 1fr 20vh;
+    grid-template-areas:
+    "head head head head"
+    "aside main main main"
+    "aside main main main"
+    "foot foot foot foot"   
+}
+
+.paper p {
+    margin: 1.5rem 0;
+}
+
+.head {
+    grid-area: head;
+}
+
+.aside {
+    margin-top: 2rem;
+    grid-area: aside;
+}
+
+.main {
+    margin-top: 2rem;
+    grid-area: main;
+}
+
+.main > .mt-0 {
+    margin-top: 0;
+}
+
+.foot {
+    grid-area: foot;
+}
+
+@media screen and (max-width: 600px) {
+    .paper {
+        padding: 2.5rem;
+        grid-template-areas:
+        "head head head head"
+        "main main main main"
+        "aside aside aside aside"
+        "foot foot foot foot"  
+    }
+}
