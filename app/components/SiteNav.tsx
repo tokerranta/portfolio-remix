@@ -5,7 +5,7 @@ import { FaBars } from "react-icons/fa";
 
 export default function SiteNavbar({ children }: PropsWithChildren) {
     const { pathname } = useLocation();
-    const links = [{ to: "/", isActive: pathname === "/", label: "Home" }, { to: "/contracts", isActive: pathname === "/contracts", label: "Contracts"}, { to: "/my-work", isActive: pathname === "/my-work", label: "My work" }, { to: "/blog", isActive: pathname === "/blog", label: "Blog"}]
+    const links = [{ to: "/", isActive: pathname === "/", label: "Home" }, { to: "/cv", isActive: pathname === "/cv", label: "CV"}, { to: "/github", isActive: pathname === "/github", label: "Github" }]
     const [navbarIsOpen, setNavbarIsOpen] = useState(false);
     const toggleNavbar = () => setNavbarIsOpen(isOpen => !isOpen);
     const closeNavbar = () => setNavbarIsOpen(false);
