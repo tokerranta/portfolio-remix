@@ -1,7 +1,8 @@
 import type { LinksFunction } from "@remix-run/node";
 import Main from "~/components/Main";
+import Page from "~/components/Page";
 import PageTitle from "~/components/PageTitle";
-import contractStyle from "~/routes/contracts.css";
+import contractStyle from "~/routes/cv.css";
 
 export const links: LinksFunction = () => [
     {
@@ -13,10 +14,11 @@ export const links: LinksFunction = () => [
 export default function ContractsIndexRoute() {
 
     return (
+        <Page>
             <Main>
                 <PageTitle>CV</PageTitle>
                 <div className="paper">
-                    <div className="head bg-gray-400 p-4">
+                    <div className="cv-head bg-gray-400 p-4">
                         <h1 className="text-4xl text-gray-700">Markus Rantanikunen</h1>
                         <h2 className="text-xl text-orange-300">Fullstack web engineer</h2>
                         <p className="my-4 text-xl text-gray-700">Markus is a passionate full stack developer, mainly within  Javascript and React/Node, but also with plenty of .NET experience. </p>
@@ -25,7 +27,7 @@ export default function ContractsIndexRoute() {
 <p className="text-xl text-gray-700">As for personality, Markus is an open, amicable team  player; with a can-do positive attitude, keen on sharing  his knowledge and always with a smile on his face.</p>
 
                     </div>
-                    <div className="main">
+                    <div className="cv-main">
                         <h2 className="text-4xl mb-4 text-gray-700">Most recent contracts</h2>
                         <h3 className="text-2xl font-bold text-gray-700">Svenska spel, may 2021 - mar 2023</h3>
                         <p className="italic mt-0 text-orange-300">Lead frontend engineer</p>
@@ -44,7 +46,7 @@ export default function ContractsIndexRoute() {
                         <p className="text-xl text-gray-700">The team of ~6 persons had full responsibility  for the product – development, testing,  deployment, monitoring and maintenance.  We worked cross functionally, and I was often  involved in discussions regarding code  structure and architectural decisions.</p>
 
                     </div>
-                    <div className="aside">
+                    <div className="cv-aside">
                         <h2 className="text-2xl text-orange-400">Tech stack</h2>
                         <ul>
                             <li>React</li>
@@ -63,7 +65,7 @@ export default function ContractsIndexRoute() {
                             <li>Function Programing</li>
                         </ul>
                     </div>
-                    <div className="foot bg-orange-100 p-4 text-gray-700">
+                    <div className="cv-foot bg-orange-100 p-4 text-gray-700">
                         <div className="flex flex-col gap-2">
                             <h2 className="text-3xl">Contact</h2>
                             <a href="mailto:rantanikunen.markus@gmail.com" target="_blank" rel="noreferrer">Email</a>
@@ -74,5 +76,6 @@ export default function ContractsIndexRoute() {
                 </div>
 
             </Main>
+            </Page>
     )
 }

@@ -1,8 +1,6 @@
 .paper {
     display: grid;
     padding: 4.5rem;
-    width: 90%;
-    margin: 0 auto;
     background-color: white;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr 1fr 1fr 20vh;
@@ -17,25 +15,25 @@
     margin: 1.5rem 0;
 }
 
-.head {
+.cv-head {
     grid-area: head;
 }
 
-.aside {
+.cv-aside {
     margin-top: 2rem;
     grid-area: aside;
 }
 
-.main {
+.cv-main {
     margin-top: 2rem;
     grid-area: main;
 }
 
-.main > .mt-0 {
+.cv-main > .mt-0 {
     margin-top: 0;
 }
 
-.foot {
+.cv-foot {
     grid-area: foot;
 }
 

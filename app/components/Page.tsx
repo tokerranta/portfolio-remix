@@ -1,5 +1,5 @@
 import type { PropsWithChildren } from "react";
 
-export default function Page({ children }: PropsWithChildren) {
-    return (<main className="grid grid-cols-1 sm:grid-cols-12 grid-rows-5">{children}</main>)
+export default function Page({ children, withAside = false }: PropsWithChildren<{ withAside?: boolean }>) {
+    return (<div className={`page ${withAside ? "page-cols-2" : "page-cols-1"}`}>{children}</div>)
 }   
