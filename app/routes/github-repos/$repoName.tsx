@@ -4,9 +4,9 @@ import { useLoaderData } from "@remix-run/react";
 import PageTitle from "~/components/PageTitle";
 import { getRepoDetails } from "~/models/github-repos.server";
 
-export const loader = async ({ params }: LoaderArgs) => {
+export async function loader ({ params }: LoaderArgs) {
     if(typeof params.repoName === "undefined") {
-        throw new Error("bad request!");
+        throw new Response("Bad Request", { status: 400, statusText: "Missing repo name" })
     }
     const repoDetails = await getRepoDetails(params.repoName);
     return json(repoDetails);
